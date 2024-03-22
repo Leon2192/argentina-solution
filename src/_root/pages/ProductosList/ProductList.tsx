@@ -121,9 +121,7 @@ const ProductList = () => {
                 .map((producto, index) => (
                   <div
                     key={index}
-                    className={`w-full md:${
-                      isGridView ? "w-1/3" : "w-full"
-                    } p-4`}
+                    className={` ${isGridView ? "w-1/3" : "w-full"} p-4`}
                   >
                     {isGridView ? (
                       <Link
