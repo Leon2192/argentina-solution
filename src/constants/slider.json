@@ -1,0 +1,17 @@
+[
+    {
+        "src": "/assets/slider/banner_apc.webp",
+        "alt": "slider 1",
+        "type": "img"
+    },
+    {
+        "src": "/assets/slider/banner_cisco.webp",
+        "alt": "slider 2",
+        "type": "img"
+    },
+    {
+        "src": "/assets/slider/banner_apc.webp",
+        "alt": "slider 3",
+        "type": "img"
+    }
+]

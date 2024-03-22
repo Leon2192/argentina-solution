@@ -1,0 +1,78 @@
+[
+  {
+    "route": "/marcas",
+    "label": "Marcas"
+  },
+  {
+    "route": "/about",
+    "label": "Empresa",
+    "Hijos": [
+      {
+        "route": "/empresa",
+        "label": "Nuestra empresa"
+      },
+      {
+        "route": "/codigo-etica",
+        "label": "Codigo de etica y conducta"
+      },
+      {
+        "route": "/manual-cumplimiento",
+        "label": "Manual de cumplimiento"
+      },
+      {
+        "route": "/denuncia-investigacion",
+        "label": "Procedimiento de denuncia e investigacion"
+      },
+      {
+        "route": "/formulario-denuncia",
+        "label": "Formulario de denuncia"
+      },
+      {
+        "route": "/staff",
+        "label": "Nuestro staff"
+      }
+    ]
+  },
+  {
+    "route": "/capacitaciones",
+    "label": "Capacitaciones"
+  },
+  {
+    "route": "/herramientas",
+    "label": "Herramientas",
+    "Hijos": [
+      {
+        "route": "/newsletter",
+        "label": "Suscribite a nuestro newsletter"
+      },
+      {
+        "route": "/configuradores",
+        "label": "Configuradores - Presentaciones"
+      },
+      {
+        "route": "/hp-engage",
+        "label": "Hewlett Packard Engage & Grow"
+      },
+      {
+        "route": "/qr",
+        "label": "Paga con codigo QR desde tu celular"
+      },
+      {
+        "route": "/legajo-impositivo",
+        "label": "Legajo impositivo"
+      },
+      {
+        "route": "/catalogo-panduit",
+        "label": "Catalogo Panduit"
+      },
+      {
+        "route": "/drivers-nsx",
+        "label": "Drivers NSX"
+      },
+      {
+        "route": "/catalogo-zebra",
+        "label": "Catalogo Zebra"
+      }
+    ]
+  }
+]

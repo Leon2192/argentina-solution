@@ -1,0 +1,65 @@
+{
+    "footer": [
+        {
+            "src": "/assets/banderas/argentina.png",
+            "sede": "Argentina",
+            "url": ""
+        },
+        {
+            "src": "/assets/banderas/uruguay.png",
+            "sede": "Uruguay",
+            "url": "https://www.solutionbox.com.uy/"
+        },
+        {
+            "src": "/assets/banderas/chile.png",
+            "sede": "Chile",
+            "url": "https://www.solutionbox.com.cl/"
+        },
+        {
+            "src": "/assets/banderas/estadosunidos.png",
+            "sede": "Estados Unidos",
+            "url": "https://www.solutionboxusa.com/"
+        },
+        {
+            "src": "/assets/banderas/paraguay.png",
+            "sede": "Paraguay",
+            "url": "https://www.solutionbox.com.py/"
+        },
+        {
+            "src": "/assets/banderas/costarica.png",
+            "sede": "Costa Rica",
+            "url": "https://www.solutionbox.com.cr/"
+        },
+        {
+            "src": "/assets/banderas/Republicadominicana.png",
+            "sede": "Republica Dominicana",
+            "url": "https://www.solutionbox.com.do/"
+        },
+        {
+            "src": "/assets/banderas/elsalvador.png",
+            "sede": "El Salvador",
+            "url": "https://www.solutionbox.com.sv/"
+        },
+        {
+            "src": "/assets/banderas/guatemala.png",
+            "sede": "Guatemala",
+            "url": "https://www.solutionbox.com.gt/"
+        },
+        {
+            "src": "/assets/banderas/panama.png",
+            "sede": "Panama",
+            "url": "https://www.solutionbox.com.pa/"
+        }
+    ],
+    "contacto": [
+        {
+            "direccion": "Goncalves Dias 664, CABA (C1276ACH), República Argentina",
+            "telefono": " (+ 54 11) 6091-1200",
+            "email": "info@solutionbox.com.ar",
+            "instagram": "https://www.instagram.com/sboxargentina/",
+            "facebook": "https://www.facebook.com/solutionboxarg",
+            "twitter": "https://twitter.com/SolutionBoxArg",
+            "linkedin": "https://ar.linkedin.com/company/solution-box-srl"
+        }
+    ]
+}
