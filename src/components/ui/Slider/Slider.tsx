@@ -30,6 +30,7 @@ const Slider = () => {
     return () => {
       clearInterval(intervalId);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current]);
 
   return (

@@ -19,9 +19,7 @@ export const ProductosProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [marcas, setMarcas] = useState<MarcaInterface[] | null>(null);
-  const [categorias, setCategorias] = useState<CategoriaInterface[] | null>(
-    null
-  );
+  const [categorias] = useState<CategoriaInterface[] | null>(null);
 
   useEffect(() => {
     const storageMarcas = localStorage.getItem("marcas");
@@ -53,6 +51,7 @@ export const ProductosProvider: React.FC<{ children: ReactNode }> = ({
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useProductosContext = (): ProductosContextType => {
   const context = useContext(ProductosContext);
   if (!context) {
