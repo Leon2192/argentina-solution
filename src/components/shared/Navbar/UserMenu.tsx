@@ -3,15 +3,21 @@ import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
 import { CiLogin } from "react-icons/ci";
 import { FaUserFriends } from "react-icons/fa";
+import { ImProfile } from "react-icons/im";
+import { SlLogout } from "react-icons/sl";
 import { useNavigate } from "react-router";
+import { useAuthContext } from "../../../context/AuthContext";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const { user, handleLogout, token } = useAuthContext();
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
+
+  user && console.log(user, "user desde navbar", token, "y este es el token");
 
   return (
     <div className="relative">
@@ -34,7 +40,7 @@ const UserMenu = () => {
          transition
          "
         >
-          ¡Bienvenido!
+          ¡Bienvenido {user && "Usuario logueado"}!
           <div className="hidden md:block">
             <Avatar />
           </div>
@@ -46,15 +52,31 @@ const UserMenu = () => {
           <div className="flex flex-col cursor-pointer">
             <>
               <MenuItem
-                onClick={() => navigate("/login")}
-                label="Iniciar sesion"
-                icon={<CiLogin size={"1.5em"} />}
+                onClick={
+                  !user ? () => navigate("/login") : () => navigate("/profile")
+                }
+                label={!user ? "Iniciar sesion" : "Ver perfil"}
+                icon={
+                  !user ? (
+                    <CiLogin size={"1.5em"} />
+                  ) : (
+                    <ImProfile size={"1.5em"} />
+                  )
+                }
               />
 
               <MenuItem
-                onClick={() => navigate("/register")}
-                label="Registrarse"
-                icon={<FaUserFriends size={"1.5em"} />}
+                onClick={
+                  !user ? () => navigate("/register") : () => handleLogout("CS")
+                }
+                label={!user ? "Registrarse" : "Cerrar sesion"}
+                icon={
+                  !user ? (
+                    <FaUserFriends size={"1.5em"} />
+                  ) : (
+                    <SlLogout size={"1.5em"} />
+                  )
+                }
               />
             </>
           </div>

@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/shared/Navbar/Navbar";
 import Footer from "./components/shared/Footer/Footer";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./_root/pages/Home/Home";
 import NuestraEmpresa from "./_root/pages/NuestraEmpresa/NuestraEmpresa";
 import ProductList from "./_root/pages/ProductosList/ProductList";
@@ -38,7 +38,7 @@ function App() {
   console.log(fiveOfertas, "estas son las ofertas");
 
   return (
-    <BrowserRouter>
+    <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -73,7 +73,7 @@ function App() {
         <Route path="/catalogo-zebra" element={<CatalogoZebra />} />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </>
   );
 }
 
