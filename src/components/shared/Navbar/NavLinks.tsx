@@ -62,8 +62,9 @@ const NavLinks = () => {
               <div className="absolute top-full left-0 bg-white border border-white rounded shadow-md py-1 mt-2 w-full md:w-[1150px] ml-6 flex flex-wrap gap-4 mt-8 z-50">
                 {marcas &&
                   marcas.map((marca) => (
-                    <div
+                    <Link
                       key={marca.Codigo}
+                      to={`/marcas/${marca.Codigo}`}
                       className={`flex items-center justify-between px-2 py-2 ${
                         hoveredMarca === marca.Descripcion
                           ? "bg-red-700"
@@ -77,17 +78,15 @@ const NavLinks = () => {
                         textOverflow: "ellipsis",
                       }}
                     >
-                      <Link to={`/marcas/${marca.Codigo}`}>
-                        <p className="text-gray-800 hover:text-white text-sm">
-                          {marca.Descripcion}
-                        </p>
-                      </Link>
+                      <p className="text-gray-800 hover:text-white text-sm">
+                        {marca.Descripcion}
+                      </p>
                       <img
                         src="/assets/marcas/intel.png"
                         alt=""
                         className="h-8 w-8 rounded-full"
                       />
-                    </div>
+                    </Link>
                   ))}
               </div>
             )}
