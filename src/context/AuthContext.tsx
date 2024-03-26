@@ -5,7 +5,7 @@ import { useLocalStorage } from "../libs/hooks/useLocalStorage";
 import { useNavigate } from "react-router";
 
 interface AuthContextType {
-  desloguearse: (code?: string) => void;
+  // desloguearse: (code?: string) => void;
   handleLogout: (code?: string) => void;
   desloguearInicio: () => void;
   token: string | null;
@@ -33,17 +33,17 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
 
   const urlApiLogin = import.meta.env.VITE_REACT_APP_API_LOGIN as string;
 
-  const desloguearse = (code?: string) => {
-    axios
-      .post(`${urlApiLogin}/logout`, null, {
-        headers: { Authorization: "Bearer " + token },
-      })
-      .then(() => setToken(null))
-      .then(() => localStorage.clear())
-      .then(() => console.log("código =>", code))
+  // const desloguearse = (code?: string) => {
+  //   axios
+  //     .post(`${urlApiLogin}/logout`, null, {
+  //       headers: { Authorization: "Bearer " + token },
+  //     })
+  //     .then(() => setToken(null))
+  //     .then(() => localStorage.clear())
+  //     .then(() => console.log("código =>", code))
 
-      .catch((_error) => console.log("Logout con error", code));
-  };
+  //     .catch((_error) => console.log("Logout con error", code));
+  // };
 
   const handleLogout = (code = "") => {
     axios
@@ -89,7 +89,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   const contextValue: AuthContextType = {
-    desloguearse,
+    // desloguearse,
     handleLogout,
     desloguearInicio,
     token,

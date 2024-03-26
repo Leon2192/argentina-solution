@@ -3,6 +3,8 @@ import { getProductsPorMarca } from "../../api/articulos/productos";
 import { useNavigate } from "react-router";
 
 type Producto = {
+  Precio: number | undefined;
+  Stock: number | undefined;
   Marca: string;
   Nombre: string;
   Descripcion_corta?: string;

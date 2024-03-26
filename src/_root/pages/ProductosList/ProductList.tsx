@@ -1,6 +1,6 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Banner from "../../../components/shared/Banner/Banner";
-import CardOferta from "../../../components/ui/CardOferta/CardOferta";
+import CardProducto from "../../../components/ui/CardProducto/CardProducto";
 import TableProducts from "../../../components/ui/TableProducts/TableProducts";
 import useGetProductosPorMarca from "../../../libs/hooks/useGetProductosPorMarca";
 import { Link, useParams } from "react-router-dom";
@@ -131,7 +131,7 @@ const ProductList = () => {
                         state={{ producto }}
                       >
                         <div>
-                          <CardOferta
+                          <CardProducto
                             nombre={producto.Nombre}
                             imagen={
                               !producto.Imagenes
@@ -142,6 +142,9 @@ const ProductList = () => {
                                 : img
                             }
                             descripcion={producto.Marca}
+                            sku={producto.Alias}
+                            stock={producto.Stock}
+                            precio={producto.Precio}
                           />
                         </div>
                       </Link>
@@ -164,6 +167,8 @@ const ProductList = () => {
                           }
                           descripcion={producto.Marca}
                           sku={producto.Alias}
+                          stock={producto.Stock}
+                          precio={producto.Precio}
                         />
                       </Link>
                     )}
